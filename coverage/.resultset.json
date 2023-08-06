@@ -1,41 +1,22 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/facades/recipe_facade.rb": {
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/controllers/api/v1/recipes_controller.rb": {
         "lines": [
           1,
           1,
-          2,
-          null,
-          2,
           1,
-          null,
           1,
-          20,
-          null,
-          null,
+          1,
           null,
           null
         ]
       },
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/services/recipe_service.rb": {
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
           1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          null,
           null
         ]
       },
@@ -51,6 +32,68 @@
           20,
           20,
           null,
+          null
+        ]
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/facades/country_facade.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/facades/recipe_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          1,
+          20,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/services/recipe_service.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/serializers/recipe_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -70,34 +113,6 @@
         "lines": [
           null,
           null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/facades/country_facade.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0,
           0,
@@ -172,6 +187,6 @@
         }
       }
     },
-    "timestamp": 1691361531
+    "timestamp": 1691362911
   }
 }
