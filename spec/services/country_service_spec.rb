@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe CountryService do
@@ -20,7 +22,7 @@ RSpec.describe CountryService do
     expect(country).to be_an Array
     expect(country.first).to have_key(:name)
     expect(country.first[:name]).to be_a Hash
-    expect(country.first[:name]).to have_key(:common) 
+    expect(country.first[:name]).to have_key(:common)
     expect(country.first[:name][:common]).to be_a String
     expect(country.first[:name][:common]).to eq('Thailand')
   end
