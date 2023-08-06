@@ -10,7 +10,7 @@ class CountryService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def get_countries
+  def all_countries
     get_url('all')
   end
 

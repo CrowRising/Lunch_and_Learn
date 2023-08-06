@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe RecipeService do
   it 'can get a list of recipes', :vcr do
-    recipes = RecipeService.get_recipes('Thailand')
+    recipes = RecipeService.new.get_recipes('Thailand')
 
     expect(recipes).to be_a Hash
     expect(recipes).to have_key(:hits)
