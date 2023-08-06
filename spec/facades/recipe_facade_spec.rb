@@ -18,5 +18,13 @@ RSpec.describe "Recipe Facade" do
       expect(recipes.first.country).to_not be_empty
       expect(recipes.first.id).to eq('null')
     end
+
+    it "returns an empty array when there are no recipes for the country", :vcr do
+      #
+      recipes = RecipeFacade.new.get_recipes('NonexistentCountry')
+
+      expect(recipes).to be_an Array
+      expect(recipes).to be_empty
+    end
   end
 end
