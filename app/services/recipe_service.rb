@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class RecipeService
-  def conn 
+  def conn
     Faraday.new(url: 'https://api.edamam.com') do |faraday|
       faraday.headers['Content-Type'] = 'application/json'
       faraday.params['type'] = 'public'

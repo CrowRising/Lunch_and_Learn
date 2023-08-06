@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class CountryService
-  
-  def conn 
+  def conn
     Faraday.new(url: 'https://restcountries.com/v3.1') do |faraday|
     end
   end
