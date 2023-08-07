@@ -23,17 +23,21 @@
           null,
           1,
           1,
-          3,
+          4,
           null,
           null,
           null,
           1,
-          3,
-          3,
+          4,
+          4,
           null,
           null,
           1,
           2,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           1,
@@ -122,6 +126,34 @@
           null
         ]
       },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/serializers/air_quality_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/channels/application_cable/channel.rb": {
         "lines": [
           null,
@@ -139,6 +171,27 @@
           null,
           null,
           0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/facades/air_quality_facade.rb": {
+        "lines": [
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
           0,
           0,
           0
@@ -183,8 +236,27 @@
         ],
         "branches": {
         }
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/services/air_quality_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1691372249
+    "timestamp": 1691426706
   }
 }
