@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe CountryService do
   it 'can get a list of countries', :vcr do
-    countries = CountryService.new.get_countries
+    countries = CountryService.new.all_countries
 
     expect(countries).to be_an Array
 
