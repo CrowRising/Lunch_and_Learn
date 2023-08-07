@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe CountryService do
   it 'can get a list of countries', :vcr do
-    countries = CountryService.new.get_countries
+    countries = CountryService.new.all_countries
 
     expect(countries).to be_an Array
 
@@ -25,5 +25,11 @@ RSpec.describe CountryService do
     expect(country.first[:name]).to have_key(:common)
     expect(country.first[:name][:common]).to be_a String
     expect(country.first[:name][:common]).to eq('Thailand')
+  end
+
+  it 'can get a capital by name', :vcr do
+    capital = CountryService.new.get_capital('Bangkok')
+
+    expect(capital).to be_an Array
   end
 end
