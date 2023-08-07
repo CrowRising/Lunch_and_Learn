@@ -6,10 +6,10 @@ class AirQualityFacade
   end
 
   def get_air_quality_by_country(country)
-    country_data = @country_service.capital(capital)
-    capital = country_data&.dig(0, :capital)
+    capital = @country_service.get_capital(capital)
     air_quality_data = @air_quality_service.get_air_quality(capital)
 
     air_quality_data
   end
 end
+
