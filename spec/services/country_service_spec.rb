@@ -28,7 +28,7 @@ RSpec.describe CountryService do
   end
 
   it 'can get a capital by name', :vcr do
-    capital = CountryService.new.capital('Bangkok')
+    capital = CountryService.new.get_capital('Bangkok')
 
     expect(capital).to be_an Array
   end
