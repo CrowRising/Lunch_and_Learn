@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Video Service' do
@@ -8,7 +10,7 @@ RSpec.describe 'Video Service' do
 
       expect(video_data).to be_a(Hash)
       expect(video_data).to have_key(:items)
-      
+
       video_data[:items].each do |video|
         expect(video).to have_key(:id)
         expect(video[:id]).to have_key(:videoId)

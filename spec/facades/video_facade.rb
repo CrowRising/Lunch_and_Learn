@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Video Facade' do
@@ -16,9 +18,9 @@ RSpec.describe 'Video Facade' do
 
       expect(videos.first).to be_a Video
       expect(videos.first.title).to be_a String
-      expect(videos.first.title).to eq("Scott Steiner vs. Triple H — Arm Wrestling Match: On this day in 2002")
+      expect(videos.first.title).to eq('Scott Steiner vs. Triple H — Arm Wrestling Match: On this day in 2002')
       expect(videos.first.youtube_video_id).to be_a String
-      expect(videos.first.youtube_video_id).to eq("PPT79cfIAWs")
+      expect(videos.first.youtube_video_id).to eq('PPT79cfIAWs')
     end
 
     it 'returns an empty array if no videos are found' do

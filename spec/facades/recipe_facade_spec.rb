@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Recipe Facade" do
-  describe "class methods" do
-    it "returns a list of recipes by country", :vcr do
+RSpec.describe 'Recipe Facade' do
+  describe 'class methods' do
+    it 'returns a list of recipes by country', :vcr do
       recipes = RecipeFacade.new.get_recipes('Thailand')
 
       expect(recipes).to be_an Array
@@ -19,8 +21,7 @@ RSpec.describe "Recipe Facade" do
       expect(recipes.first.id).to eq('null')
     end
 
-    it "returns an empty array when there are no recipes for the country", :vcr do
-      #
+    it 'returns an empty array when there are no recipes for the country', :vcr do
       recipes = RecipeFacade.new.get_recipes('NonexistentCountry')
 
       expect(recipes).to be_an Array

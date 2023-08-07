@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Learning Resources API' do
@@ -37,7 +39,7 @@ RSpec.describe 'Learning Resources API' do
         expect(image[:alt_tag]).to be_a(String)
         expect(image).to have_key(:url)
         expect(image[:url]).to be_a(String)
-      end 
+      end
     end
 
     it 'returns an empty array if no learning resources are found', :vcr do
@@ -49,7 +51,7 @@ RSpec.describe 'Learning Resources API' do
       learning_resources = JSON.parse(response.body, symbolize_names: true)
       expect(learning_resources).to be_a(Hash)
       expect(learning_resources).to have_key(:data)
-      expect(learning_resources[:data]).to be_a Hash  
+      expect(learning_resources[:data]).to be_a Hash
       expect(learning_resources[:data]).to have_key(:id)
       expect(learning_resources[:data][:id]).to eq(nil)
       expect(learning_resources[:data]).to have_key(:type)
@@ -57,7 +59,7 @@ RSpec.describe 'Learning Resources API' do
       expect(learning_resources[:data]).to have_key(:attributes)
       expect(learning_resources[:data][:attributes]).to be_a(Hash)
       expect(learning_resources[:data][:attributes][:country]).to be_a(String)
-      expect(learning_resources[:data][:attributes][:country]).to eq(country) 
+      expect(learning_resources[:data][:attributes][:country]).to eq(country)
       expect(learning_resources[:data][:attributes]).to have_key(:video)
       expect(learning_resources[:data][:attributes][:video]).to eq({})
       expect(learning_resources[:data][:attributes]).to have_key(:images)

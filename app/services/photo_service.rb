@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PhotoService
-  def conn 
+  def conn
     Faraday.new(url: 'https://api.unsplash.com') do |f|
       f.params['client_id'] = ENV['UNSPLASH_API_KEY']
       f.headers['Content-Type'] = 'application/json'

@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class RecipeFacade
   def get_recipes(country)
     recipes = RecipeService.new.get_recipes(country)
-    
+
     if recipes[:hits].empty?
       [] # Return an empty array if there are no recipes for the country.
     else

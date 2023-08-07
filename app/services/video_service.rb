@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class VideoService
   def get_videos(country)
     response = conn.get('/youtube/v3/search') do |req|
