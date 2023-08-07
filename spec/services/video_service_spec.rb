@@ -8,7 +8,7 @@ RSpec.describe 'Video Service' do
 
       expect(video_data).to be_a(Hash)
       expect(video_data).to have_key(:items)
-require 'pry'; binding.pry
+      
       video_data[:items].each do |video|
         expect(video).to have_key(:id)
         expect(video[:id]).to have_key(:videoId)
