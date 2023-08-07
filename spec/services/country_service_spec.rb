@@ -26,4 +26,10 @@ RSpec.describe CountryService do
     expect(country.first[:name][:common]).to be_a String
     expect(country.first[:name][:common]).to eq('Thailand')
   end
+
+  it 'can get a capital by name', :vcr do
+    capital = CountryService.new.capital('Bangkok')
+
+    expect(capital).to be_an Array
+  end
 end
