@@ -39,5 +39,29 @@ RSpec.describe 'Learning Resources API' do
         expect(image[:url]).to be_a(String)
       end 
     end
+
+    it 'returns an empty array if no learning resources are found', :vcr do
+      country = 'asdfasdfasdf'
+      get "/api/v1/learning_resources?country=#{country}"
+
+      expect(response).to be_successful
+
+      learning_resources = JSON.parse(response.body, symbolize_names: true)
+      expect(learning_resources).to be_a(Hash)
+      expect(learning_resources).to have_key(:data)
+      expect(learning_resources[:data]).to be_a Hash  
+      expect(learning_resources[:data]).to have_key(:id)
+      expect(learning_resources[:data][:id]).to eq(nil)
+      expect(learning_resources[:data]).to have_key(:type)
+      expect(learning_resources[:data][:type]).to eq('learning_resource')
+      expect(learning_resources[:data]).to have_key(:attributes)
+      expect(learning_resources[:data][:attributes]).to be_a(Hash)
+      expect(learning_resources[:data][:attributes][:country]).to be_a(String)
+      expect(learning_resources[:data][:attributes][:country]).to eq(country) 
+      expect(learning_resources[:data][:attributes]).to have_key(:video)
+      expect(learning_resources[:data][:attributes][:video]).to eq({})
+      expect(learning_resources[:data][:attributes]).to have_key(:images)
+      expect(learning_resources[:data][:attributes][:images]).to eq([])
+    end
   end
 end
