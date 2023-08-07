@@ -1,11 +1,13 @@
 class AirQualitySerializer
-  def initialized(data)
+  include JSONAPI::Serializer
+
+  def initialize(data)
     @data = data
   end
 
   def serialize
     return {} if @data.nil? || @data.empty?
-    
+
     {
       "data": {
         "id": nil,
@@ -13,8 +15,8 @@ class AirQualitySerializer
         "city": @data[:city],
         "attributes": {
           "aqi": @data[:aqi],
-          "pm25_concentration": @data[:pm25_concentration], #
-          "co_concentration": @data[:co_concentration] 
+          "pm25_concentration": @data[:PM_5][:concentration],
+          "co_concentration": @data[:CO][:concentration] 
         }
       }
     }
