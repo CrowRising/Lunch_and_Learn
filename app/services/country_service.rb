@@ -18,4 +18,8 @@ class CountryService
   def get_country(country)
     get_url("name/#{country}")
   end
+
+  def capital(capital)
+    get_url("capital/#{capital}")
+  end
 end
