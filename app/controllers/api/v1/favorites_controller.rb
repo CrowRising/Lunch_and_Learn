@@ -5,7 +5,7 @@ class Api::V1::FavoritesController < ApplicationController
     return error unless user
     new_fave = Favorite.create(favorite_params)
     new_fave.update(user_id: user.id) 
-    render json: { success: "Successfully added #{new_fave.recipe_title } to your favorites!"}, status: 201
+    render json: { success: "Favorite added successfully"}, status: 201
   end
 
   private
@@ -14,6 +14,6 @@ class Api::V1::FavoritesController < ApplicationController
   end
 
   def error
-    render json: ErrorSerializer.new("Unauthorized user", "401").serialized_json, status: 401
+    render json: { error: "Unauthorized user" }, status: 401  
   end
 end
