@@ -34,5 +34,48 @@ RSpec.describe "Users", type: :request do
     expect(response_body[:data][:attributes][:email]).to be_a(String)
     expect(response_body[:data][:attributes]).to have_key(:api_key)
    end
+
+   it "returns an error if email is already taken" do
+    User.create(name: "Jedaphia", email: "goodboy@ruff.com", password: "treats4lyf", password_confirmation: "treats4lyf")
+    user_params = {
+      name: "Odell",
+      email: "goodboy@ruff.com", 
+      password: "treats4lyf", 
+      password_confirmation: "treats4lyf"
+     }
+
+     headers = {"CONTENT_TYPE" => "application/json"}
+     post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
+
+     expect(response).to_not be_successful
+     expect(response.status).to eq(400)
+
+     response_body = JSON.parse(response.body, symbolize_names: true)
+
+     expect(response_body).to have_key(:errors)
+     expect(response_body[:errors]).to eq(["Email has already been taken"])
+     expect(response_body[:errors]).to be_a(Array)
+   end
+
+   it "returns an error if password and password confirmation do not match" do
+    user_params = {
+      name: "Odell",
+      email: "goodboy@ruff.com", 
+      password: "treats4lyf", 
+      password_confirmation: "treat4lyfff"
+     }
+
+     headers = {"CONTENT_TYPE" => "application/json"}
+     post "/api/v1/users", params: user_params
+
+     expect(response).to_not be_successful
+     expect(response.status).to eq(400)
+
+     response_body = JSON.parse(response.body, symbolize_names: true)
+
+     expect(response_body).to have_key(:errors)
+     expect(response_body[:errors]).to eq(["Password confirmation doesn't match Password"])
+     expect(response_body[:errors]).to be_a(Array)
+   end
   end
 end
