@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/controllers/api/v1/users_controller.rb": {
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/facades/book_facade.rb": {
         "lines": [
           1,
           null,
@@ -9,58 +9,71 @@
           1,
           1,
           null,
+          null,
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          100,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
           0,
           null,
-          null,
-          null,
+          null
+        ]
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/poros/book.rb": {
+        "lines": [
+          1,
           1,
           null,
+          1,
+          1,
           1,
           1,
           null,
           null
         ]
       },
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/models/user.rb": {
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/services/book_service.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
-          1,
+          null,
+          null,
           1,
           null,
           1,
           1,
-          null,
-          null
-        ]
-      },
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/models/application_record.rb": {
-        "lines": [
+          1,
           null,
           null,
           1,
           1,
-          null
-        ]
-      },
-      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/serializers/user_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
+          null,
           null
         ]
       },
@@ -125,6 +138,41 @@
           0,
           0,
           0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
           0,
           0
         ],
@@ -221,6 +269,34 @@
       "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/mailers/application_mailer.rb": {
         "lines": [
           null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/models/user.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           0,
           0,
@@ -339,6 +415,16 @@
         "branches": {
         }
       },
+      "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/serializers/user_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/Users/crowrising/Turing/3Mod/TakeTwo/Projects/Lunch_and_Learn/app/services/country_service.rb": {
         "lines": [
           null,
@@ -445,6 +531,6 @@
         }
       }
     },
-    "timestamp": 1691461556
+    "timestamp": 1691508631
   }
 }
