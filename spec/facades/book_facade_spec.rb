@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe BookFacade do
   describe 'instance methods' do
     it '#get_book_data', :vcr do
-      book = BookFacade.new('France', 5).get_book_data
+      book = BookFacade.new('Paris', 5).get_book_data
 
       expect(book).to be_a(Book)
       expect(book.city).to be_a(String)

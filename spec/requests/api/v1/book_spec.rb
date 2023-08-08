@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Book API' do
   describe 'happy path' do
     it 'returns book data for a given country', :vcr do
-     book_facade = BookFacade.new('France', 5)
-     allow(BookFacade).to receive(:new).and_return(book_facade) 
+  
       get '/api/v1/book_search?location=France&quantity=5'
 
       expect(response).to be_successful
@@ -23,6 +22,7 @@ RSpec.describe 'Book API' do
       expect(book_data[:data][:attributes]).to be_a(Hash)
       expect(book_data[:data][:attributes]).to have_key(:city)
       expect(book_data[:data][:attributes][:city]).to be_a(String)
+      expect(book_data[:data][:attributes][:city]).to eq('Paris')
       expect(book_data[:data][:attributes]).to have_key(:total_books_found)
       expect(book_data[:data][:attributes][:total_books_found]).to be_an(Integer)
       expect(book_data[:data][:attributes]).to have_key(:books)
