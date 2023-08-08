@@ -6,7 +6,6 @@ class BookFacade
   end
 
   def get_book_data
-    data = book_data
     Book.new(@location, total_books_found, books)
   end
 
