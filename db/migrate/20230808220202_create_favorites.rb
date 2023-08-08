@@ -4,7 +4,7 @@ class CreateFavorites < ActiveRecord::Migration[7.0]
       t.string :country
       t.string :recipe_link
       t.string :recipe_title
-      t.references :users, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
