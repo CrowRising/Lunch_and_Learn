@@ -52,6 +52,16 @@ RSpec.describe 'Registered user login', type: :request do
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
+
+      response_body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response_body).to have_key(:error)
+      expect(response_body[:error]).to eq("Invalid credentials")
+      expect(response_body[:error]).to be_a(String)
+      expect(response_body).to_not have_key(:data)
+      expect(response_body).to_not have_key(:attributes)
+      expect(response_body).to_not have_key(:password)
+      expect(response_body).to_not have_key(:password_confirmation)
     end
   end
 end
